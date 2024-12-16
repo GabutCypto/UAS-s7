@@ -5,7 +5,8 @@ import { ThemedView } from '@/components/ThemedView';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 
-// Fiktif Produk
+const colors = ['#E5E7EB', '#F1F2F3', '#F8F9FA'];
+
 const products = [
   {
     name: 'Produk 1',
@@ -24,11 +25,10 @@ const products = [
   },
 ];
 
-// Fiktif Kategori
 const categories = [
-  'Elektronik',
-  'Pakaian',
-  'Makanan & Minuman',
+  'Makanan',
+  'Minuman',
+  'Menu Paket',
 ];
 
 export default function HomeScreen() {
@@ -92,45 +92,66 @@ const styles = StyleSheet.create({
   headerImage: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 40, // Menambahkan ruang vertikal agar header lebih nyaman dilihat
+    paddingVertical: 40, 
     paddingHorizontal: 20,
   },
   welcomeText: {
-    fontSize: 30, // Ukuran font lebih besar untuk menyambut pengunjung
+    fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 20, // Memberi jarak antara judul dan wave
+    marginBottom: 20, 
   },
   categoryContainer: {
     marginVertical: 16,
   },
   categoryTitle: {
-    fontSize: 20, // Ukuran font yang sedikit lebih besar untuk judul kategori
+    fontSize: 20, 
     fontWeight: 'bold',
   },
   categoryItem: {
     marginHorizontal: 10,
     paddingVertical: 12,
     paddingHorizontal: 20,
-    backgroundColor: '#A1CEDC',
+    backgroundColor: '#000000',
     borderRadius: 8,
-    marginBottom: 10, // Memberikan sedikit jarak antar item kategori
+    marginBottom: 10, 
   },
   productContainer: {
     marginVertical: 16,
   },
+
   productTitle: {
-    fontSize: 20, // Ukuran font yang lebih besar untuk judul produk
+    fontSize: 20,
     fontWeight: 'bold',
   },
   productItem: {
     marginHorizontal: 10,
-    padding: 10,
-    backgroundColor: '#F3F4F6',
+    padding: 20,
+    backgroundColor: '#000000',
     borderRadius: 8,
-    minWidth: 250, // Memberikan ukuran minimum untuk setiap produk agar konsisten
-    marginBottom: 10, // Memberikan jarak antar produk
+    minWidth: 250,
+    marginBottom: 10,
   },
+
+  productImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 10,
+    marginBottom: 10,
+  },
+
+  productDescription: {
+    fontSize: 14, 
+    color: '#000000',
+    marginBottom: 5, 
+  },
+
+  productPrice: {
+    fontWeight: 'bold', 
+    fontSize: 16, 
+    color: '#000000', 
+  },
+
   stepContainer: {
     gap: 8,
     marginBottom: 8,
