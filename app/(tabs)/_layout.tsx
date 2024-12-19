@@ -4,7 +4,12 @@ import { Ionicons } from '@expo/vector-icons';
 
 export default () => {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: '#FF4500', // Warna ikon saat aktif
+        tabBarInactiveTintColor: '#808080', // Warna ikon saat tidak aktif
+      }}
+    >
       {/* Halaman Home dengan Tab Navigasi */}
       <Tabs.Screen
         name="home"
